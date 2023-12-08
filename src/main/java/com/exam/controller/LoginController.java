@@ -1,9 +1,12 @@
 package com.exam.controller;
 
-import com.exam.entity.*;
-import com.exam.service.serviceimpl.LoginServiceImpl;
 import com.exam.Result.ApiResult;
 import com.exam.Result.ApiResultHandler;
+import com.exam.entity.Admin;
+import com.exam.entity.Login;
+import com.exam.entity.Student;
+import com.exam.entity.Teacher;
+import com.exam.service.serviceimpl.LoginServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

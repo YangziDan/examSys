@@ -8,8 +8,6 @@ import com.exam.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class LoginServiceImpl implements LoginService {
 
@@ -18,7 +16,8 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public Admin adminLogin(Integer username, String password) {
-        return loginMapper.adminLogin(username,password);
+        Admin a=loginMapper.adminLogin(username,password);
+        return a;
     }
 
     @Override

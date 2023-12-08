@@ -2,8 +2,6 @@ package com.exam.entity;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * 考试管理表实体类
  */
