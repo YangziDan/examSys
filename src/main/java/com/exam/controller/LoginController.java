@@ -8,6 +8,7 @@ import com.exam.entity.Student;
 import com.exam.entity.Teacher;
 import com.exam.service.serviceimpl.LoginServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 校验用户身份交由前端处理
  */
 @RestController
+@CrossOrigin
 public class LoginController {
 
     @Autowired
