@@ -34,6 +34,11 @@ public class FillQuestionServiceImpl extends ServiceImpl<FillQuestionMapper, Fil
     }
 
     @Override
+    public FillQuestion findByQuestionId(Integer questionId) {
+        return fillQuestionMapper.findByQuestionId(questionId);
+    }
+
+    @Override
     public FillQuestion findOnlyQuestionId() {
         return fillQuestionMapper.findOnlyQuestionId();
     }

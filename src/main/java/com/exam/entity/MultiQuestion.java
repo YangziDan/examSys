@@ -4,7 +4,7 @@ import lombok.Data;
 
 // 选择题实体
 @Data
-public class MultiQuestion {
+public class MultiQuestion extends Question{
     private Integer questionId;
 
     private String subject;

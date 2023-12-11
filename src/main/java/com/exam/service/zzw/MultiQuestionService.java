@@ -4,6 +4,7 @@ package com.exam.service.zzw;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.exam.entity.JudgeQuestion;
 import com.exam.entity.MultiQuestion;
 
 import java.util.List;
@@ -25,4 +26,6 @@ public interface MultiQuestionService extends IService<MultiQuestion> {
     int add(MultiQuestion multiQuestion);
 
     List<Integer> findBySubject(String subject,Integer pageNo);
+
+    MultiQuestion findByQuestionId(Integer questionId);
 }

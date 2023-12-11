@@ -1,7 +1,12 @@
 package com.exam.controller.zzw;
 
 
+import com.exam.entity.JudgeQuestion;
+import com.exam.service.zzw.JudgeQuestionService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,8 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-12-09 14:20:25
  */
 @RestController
-@RequestMapping("judgeQuestion")
+@RequestMapping("/judgeQuestion")
 public class JudgeQuestionController {
 
+    @Autowired
+    private JudgeQuestionService judgeQuestionService;
+
+    @GetMapping("/getJudgeQuestion")
+    public JudgeQuestion getJudgeQuestionByQuestionId(@RequestParam Integer questionId){
+        return judgeQuestionService.findByQuestionId(questionId);
+    }
 }
 

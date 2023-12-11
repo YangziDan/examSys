@@ -4,7 +4,7 @@ import lombok.Data;
 
 //填空题实体类
 @Data
-public class FillQuestion {
+public class FillQuestion extends Question{
     private Integer questionId;
 
     private String subject;

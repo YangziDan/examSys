@@ -3,6 +3,7 @@ package com.exam.service.zzw.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.exam.entity.FillQuestion;
 import com.exam.entity.JudgeQuestion;
 import com.exam.mapper.zzw.JudgeQuestionMapper;
 import com.exam.service.zzw.JudgeQuestionService;
@@ -46,5 +47,10 @@ public class JudgeQuestionServiceImpl extends ServiceImpl<JudgeQuestionMapper, J
     @Override
     public List<Integer> findBySubject(String subject, Integer pageNo) {
         return judgeQuestionMapper.findBySubject(subject,pageNo);
+    }
+
+    @Override
+    public JudgeQuestion findByQuestionId(Integer questionId) {
+        return judgeQuestionMapper.findByQuestionId(questionId);
     }
 }

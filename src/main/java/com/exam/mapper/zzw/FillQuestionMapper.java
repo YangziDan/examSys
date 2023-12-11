@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.exam.entity.FillQuestion;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
@@ -17,6 +18,7 @@ import java.util.List;
  * @author makejava
  * @since 2023-12-09 14:19:51
  */
+@Mapper
 public interface FillQuestionMapper extends BaseMapper<FillQuestion> {
     @Select("select * from fill_question where questionId in (select questionId from paper_manage where questionType = 2 and paperId = #{paperId})")
     List<FillQuestion> findByIdAndType(Integer paperId);
@@ -38,6 +40,9 @@ public interface FillQuestionMapper extends BaseMapper<FillQuestion> {
 
     @Select("select questionId from fill_question where subject = #{subject} order by rand() desc limit #{pageNo}")
     List<Integer> findBySubject(String subject,Integer pageNo);
+
+    @Select("select * from fill_question where questionId=#{questionId}")
+    FillQuestion findByQuestionId(Integer questionId);
 
 }
 

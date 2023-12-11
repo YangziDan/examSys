@@ -25,4 +25,6 @@ public interface JudgeQuestionService extends IService<JudgeQuestion> {
 
     List<Integer> findBySubject(String subject,Integer pageNo);
 
+    JudgeQuestion findByQuestionId(Integer questionId);
+
 }

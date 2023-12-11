@@ -16,6 +16,8 @@ import java.util.List;
  */
 public interface FillQuestionService extends IService<FillQuestion> {
 
+    FillQuestion findByQuestionId(Integer questionId);
+
     List<FillQuestion> findByIdAndType(Integer paperId);
 
     IPage<FillQuestion> findAll(Page<FillQuestion> page);

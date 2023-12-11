@@ -4,6 +4,7 @@ package com.exam.service.zzw.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.exam.entity.FillQuestion;
 import com.exam.entity.MultiQuestion;
 import com.exam.mapper.zzw.MultiQuestionMapper;
 import com.exam.service.zzw.MultiQuestionService;
@@ -56,5 +57,10 @@ public class MultiQuestionServiceImpl extends ServiceImpl<MultiQuestionMapper, M
     @Override
     public List<Integer> findBySubject(String subject, Integer pageNo) {
         return multiQuestionMapper.findBySubject(subject,pageNo);
+    }
+
+    @Override
+    public MultiQuestion findByQuestionId(Integer questionId) {
+        return multiQuestionMapper.findByQuestionId(questionId);
     }
 }
