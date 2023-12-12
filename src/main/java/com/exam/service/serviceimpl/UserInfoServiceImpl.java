@@ -1,7 +1,7 @@
 package com.exam.service.serviceimpl;
 
 import com.exam.entity.UserInfo;
-import com.exam.mapper.UserInfoMapper;
+import com.exam.mapper.zjh.UserInfoMapper;
 import com.exam.service.UserInfoService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
@@ -26,4 +26,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     public void updateInfo(UserInfo userInfo){
         userInfoMapper.infoUpdate(userInfo);
     }
+
+
+
 }

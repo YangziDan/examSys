@@ -9,4 +9,6 @@ public interface UserInfoService {
     public void insertInfo(UserInfo userInfo);
 
     public void updateInfo(UserInfo userInfo);
+
+
 }

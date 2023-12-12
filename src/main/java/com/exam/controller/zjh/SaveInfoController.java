@@ -1,12 +1,9 @@
-package com.exam.controller;
+package com.exam.controller.zjh;
 
 import com.exam.entity.UserInfo;
 import com.exam.service.serviceimpl.UserInfoServiceImpl;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
@@ -24,5 +21,10 @@ public class SaveInfoController {
             return "插入成功";
         }
 
+    }
+
+    @PostMapping("/push")
+    public UserInfo pushInfo(@RequestBody UserInfo userInfo){
+        return userInfoService.selectInfo(userInfo);
     }
 }
