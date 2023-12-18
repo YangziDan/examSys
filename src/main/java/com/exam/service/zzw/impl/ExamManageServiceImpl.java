@@ -44,6 +44,9 @@ public class ExamManageServiceImpl extends ServiceImpl<ExamManageMapper, ExamMan
     }
 
     @Override
+    public int deleteByPaperId(Integer paperId) {return examManageMapper.deleteByPaperId(paperId);}
+
+    @Override
     public int update(ExamManage exammanage) {
         return examManageMapper.update(exammanage);
     }

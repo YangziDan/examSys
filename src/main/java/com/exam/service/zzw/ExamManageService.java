@@ -29,7 +29,7 @@ public interface ExamManageService extends IService<ExamManage> {
     ExamManage findById(Integer examCode);
 
     int delete(Integer examCode);
-
+    int deleteByPaperId(Integer paperId);
     int update(ExamManage exammanage);
 
     int add(ExamManage exammanage);
