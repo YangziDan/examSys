@@ -12,7 +12,7 @@ public interface UserInfoMapper {
     public void infoInsert(UserInfo userInfo);
     @Select("select * from user_info where UserId=#{userId}")
     public UserInfo infoSelect(UserInfo userInfo);
-    @Update("update user_info set UserName=#{userName},UserSex=#{userSex},UserPhone=#{userPhone},UserSchool=#{userSchool} where UserId = #{userId}")
+    @Update("update user_info set UserName=#{userName},UserSex=#{userSex},UserPhone=#{userPhone},UserSchool=#{userSchool},UserImg=#{userImg} where UserId = #{userId}")
     public void infoUpdate(UserInfo userInfo);
 
 }
