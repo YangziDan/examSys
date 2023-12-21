@@ -5,7 +5,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/exam?useSSl=false
+    password: zzwzzw
+    url: jdbc:mysql://43.138.121.194:3306/exam?useSSl=false
 server:
   port: 8999
