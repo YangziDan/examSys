@@ -1,7 +1,5 @@
 package com.exam;
 
-import com.exam.service.serviceimpl.UserInfoServiceImpl;
-import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

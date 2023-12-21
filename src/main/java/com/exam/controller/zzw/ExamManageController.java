@@ -30,6 +30,7 @@ public class ExamManageController {
         apiResult = ApiResultHandler.buildApiResult(200, "请求成功！", examManageService.findAll());
         return apiResult;
     }
+    //管理员模块使用了此函数
 
     @GetMapping("/exams/{page}/{size}")
     public ApiResult findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
@@ -55,6 +56,13 @@ public class ExamManageController {
     public ApiResult deleteById(@PathVariable("examCode") Integer examCode){
         int res = examManageService.delete(examCode);
         System.out.println("删除操作=> id="+examCode);
+        return ApiResultHandler.buildApiResult(200,"删除成功",res);
+    }
+    //用于管理界面的一个接口
+    @DeleteMapping("/exam/paper/{paperId}")
+    public ApiResult deleteByPaperId(@PathVariable("paperId") Integer paperId){
+        int res = examManageService.deleteByPaperId(paperId);
+        System.out.println("删除操作=> id="+paperId);
         return ApiResultHandler.buildApiResult(200,"删除成功",res);
     }
 

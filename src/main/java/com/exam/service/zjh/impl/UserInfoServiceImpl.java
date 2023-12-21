@@ -1,8 +1,8 @@
-package com.exam.service.serviceimpl;
+package com.exam.service.zjh.impl;
 
 import com.exam.entity.UserInfo;
 import com.exam.mapper.zjh.UserInfoMapper;
-import com.exam.service.UserInfoService;
+import com.exam.service.zjh.UserInfoService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

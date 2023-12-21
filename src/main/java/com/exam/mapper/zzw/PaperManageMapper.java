@@ -4,6 +4,7 @@ package com.exam.mapper.zzw;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.exam.entity.PaperManage;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
  * @author makejava
  * @since 2023-12-09 14:06:31
  */
+@Mapper
 public interface PaperManageMapper extends BaseMapper<PaperManage> {
 
     @Select("select paperId, questionType,questionId from paper_manage")

@@ -14,11 +14,13 @@ import java.util.List;
  * @author makejava
  * @since 2023-12-09 15:06:27
  */
+@Mapper
 public interface ExamManageMapper extends BaseMapper<ExamManage> {
 
     //查询所有
     @Select("select * from exam_manage")
     List<ExamManage> findAll();
+    //管理员模块使用了此函数
 
     //分页查询
     @Select("select * from exam_manage")
@@ -29,7 +31,8 @@ public interface ExamManageMapper extends BaseMapper<ExamManage> {
 
     @Delete("delete from exam_manage where examCode = #{examCode}")
     int delete(Integer examCode);
-
+    @Delete("delete from exam_manage where paperId = #{paperId}")
+    int deleteByPaperId(Integer examCode);
     @Update("update exam_manage set description = #{description},source = #{source},paperId = #{paperId}," +
             "examDate = #{examDate},totalTime = #{totalTime},grade = #{grade},term = #{term}," +
             "major = #{major},institute = #{institute},totalScore = #{totalScore}," +
