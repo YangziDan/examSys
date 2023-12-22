@@ -1,4 +1,4 @@
-package com.exam.service.hjd.impl;
+package com.exam.service.zjh.impl;
 
 import com.exam.entity.Question;
 import com.exam.entity.WrongQuestion;

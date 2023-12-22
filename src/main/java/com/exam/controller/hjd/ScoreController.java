@@ -56,7 +56,6 @@ public class ScoreController {
             return ApiResultHandler.buildApiResult(200,"成绩添加成功",res);
         }
     }
-
     @GetMapping("/scores/{examCode}")
     public ApiResult findByExamCode(@PathVariable("examCode") Integer examCode) {
         List<Score> scores = scoreService.findByExamCode(examCode);

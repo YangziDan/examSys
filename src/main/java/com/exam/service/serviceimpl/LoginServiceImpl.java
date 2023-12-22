@@ -20,10 +20,6 @@ public class LoginServiceImpl implements LoginService {
         return a;
     }
 
-    @Override
-    public Teacher teacherLogin(Integer username, String password) {
-        return loginMapper.teacherLogin(username,password);
-    }
 
     @Override
     public Student studentLogin(Integer username, String password) {
