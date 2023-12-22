@@ -18,7 +18,7 @@ public class UploadAvatarController {
     public String getAvatar(MultipartFile file){
         String filename = file.getOriginalFilename();
         String newName = System.currentTimeMillis() + filename.substring(filename.lastIndexOf("."));
-        String path = "D:\\exam\\upload";
+        String path = "E:\\examsystem\\src\\assets\\img";
         File newPath = new File(path);
         if (!newPath.exists())
             newPath.mkdir();
@@ -28,7 +28,7 @@ public class UploadAvatarController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(path+newName);
-        return path+newName;
+        System.out.println(newName);
+        return newName;
     }
 }
