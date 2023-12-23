@@ -2,12 +2,10 @@ package com.exam.controller.zzw;
 
 
 import com.exam.entity.MultiQuestion;
+import com.exam.mapper.zzw.MultiQuestionMapper;
 import com.exam.service.zzw.MultiQuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 选择题题库表(MultiQuestion)表控制层
@@ -26,6 +24,15 @@ public class MultiQuestionController {
     public MultiQuestion getMultiQuestionByQuestionId(@RequestParam Integer questionId){
         return multiQuestionService.findByQuestionId(questionId);
     }
-
+    @Autowired
+    private MultiQuestionMapper multiQuestionMapper;
+    @PostMapping("/addMultiQuestion")
+    public void addMultiQuestion(@RequestBody MultiQuestion multiQuestion){
+        multiQuestionMapper.add2(multiQuestion);
+    }
+    @PostMapping("/delMultiQuestion")
+    public void delMultiQuestion(@RequestBody MultiQuestion question){
+        multiQuestionMapper.deleteById(question.getQuestionId());
+    }
 }
 

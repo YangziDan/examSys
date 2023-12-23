@@ -7,6 +7,7 @@ import com.exam.entity.FillQuestion;
 import com.exam.entity.JudgeQuestion;
 import com.exam.entity.MultiQuestion;
 import com.exam.entity.PaperManage;
+import com.exam.mapper.zzw.PaperManageMapper;
 import com.exam.service.zzw.FillQuestionService;
 import com.exam.service.zzw.JudgeQuestionService;
 import com.exam.service.zzw.MultiQuestionService;
@@ -71,6 +72,13 @@ public class PaperManageController {
             return ApiResultHandler.buildApiResult(200,"添加成功",res);
         }
         return ApiResultHandler.buildApiResult(400,"添加失败",res);
+    }
+
+    @Autowired
+    PaperManageMapper paperManageMapper;
+    @PostMapping("/del")
+    public void delManage(@RequestBody PaperManage paperManage){
+        paperManageMapper.del(paperManage);
     }
 
 }

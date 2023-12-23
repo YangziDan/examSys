@@ -49,6 +49,8 @@ public interface MultiQuestionMapper extends BaseMapper<MultiQuestion> {
     @Insert("insert into multi_question(subject,question,answerA,answerB,answerC,answerD,rightAnswer,analysis,section,level) " +
             "values(#{subject},#{question},#{answerA},#{answerB},#{answerC},#{answerD},#{rightAnswer},#{analysis},#{section},#{level})")
     int add(MultiQuestion multiQuestion);
+    @Insert("insert into multi_question(questionId,subject,question,answerA,answerB,answerC,answerD,rightAnswer) values(#{questionId},#{subject},#{question},#{answerA},#{answerB},#{answerC},#{answerD},#{rightAnswer})")
+    int add2(MultiQuestion multiQuestion);
 
     /**
      * 注：rand()随机数

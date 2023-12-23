@@ -3,6 +3,7 @@ package com.exam.mapper.zzw;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.exam.entity.PaperManage;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -27,5 +28,8 @@ public interface PaperManageMapper extends BaseMapper<PaperManage> {
     @Insert("insert into paper_manage(paperId,questionType,questionId) values " +
             "(#{paperId},#{questionType},#{questionId})")
     int add(PaperManage paperManage);
+
+    @Delete("delete from paper_manage where paperId = #{paperId} and questionId = #{questionId} and questionType = #{questionType}")
+    void del(PaperManage paperManage);
 }
 

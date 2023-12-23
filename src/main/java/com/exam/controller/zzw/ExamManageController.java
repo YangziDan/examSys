@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.exam.Result.ApiResult;
 import com.exam.Result.ApiResultHandler;
 import com.exam.entity.ExamManage;
+import com.exam.entity.PaperManage;
+import com.exam.mapper.zzw.PaperManageMapper;
 import com.exam.service.zzw.impl.ExamManageServiceImpl;
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,6 +96,8 @@ public class ExamManageController {
         }
         return ApiResultHandler.buildApiResult(400,"请求失败",res);
     }
+
+
 
 }
 

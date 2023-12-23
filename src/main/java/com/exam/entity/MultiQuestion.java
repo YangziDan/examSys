@@ -1,10 +1,12 @@
 package com.exam.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 // 选择题实体
 @Data
 public class MultiQuestion extends Question{
+    @TableId(value = "questionId")
     private Integer questionId;
 
     private String subject;
