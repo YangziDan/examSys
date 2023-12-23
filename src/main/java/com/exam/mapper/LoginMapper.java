@@ -3,7 +3,6 @@ package com.exam.mapper;
 
 import com.exam.entity.Admin;
 import com.exam.entity.Student;
-import com.exam.entity.Teacher;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

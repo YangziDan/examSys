@@ -2,7 +2,6 @@ package com.exam.service.serviceimpl;
 
 import com.exam.entity.Admin;
 import com.exam.entity.Student;
-import com.exam.entity.Teacher;
 import com.exam.mapper.LoginMapper;
 import com.exam.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;

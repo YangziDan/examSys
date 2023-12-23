@@ -5,7 +5,6 @@ import com.exam.Result.ApiResultHandler;
 import com.exam.entity.Admin;
 import com.exam.entity.Login;
 import com.exam.entity.Student;
-import com.exam.entity.Teacher;
 import com.exam.service.serviceimpl.LoginServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
