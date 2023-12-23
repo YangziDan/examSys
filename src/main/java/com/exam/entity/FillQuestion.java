@@ -20,4 +20,6 @@ public class FillQuestion extends Question{
     private String section;
 
     private String analysis; //题目解析
+
+    private Boolean isMark;
 }

@@ -29,4 +29,6 @@ public class MultiQuestion extends Question{
 
     private Integer score;
 
+    private Boolean isMark;
+
 }

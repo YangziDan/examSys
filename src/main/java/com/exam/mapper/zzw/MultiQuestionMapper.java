@@ -28,7 +28,7 @@ public interface MultiQuestionMapper extends BaseMapper<MultiQuestion> {
      * )
      */
     @Select("select * from multi_question where questionId in (select questionId from paper_manage where questionType = 1 and paperId = #{paperId})")
-    List<MultiQuestion> findByIdAndType(Integer PaperId);
+    List<MultiQuestion> findByIdAndType(Integer paperId);
 
     @Select("select * from multi_question")
     IPage<MultiQuestion> findAll(Page page);

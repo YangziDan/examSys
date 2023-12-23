@@ -20,4 +20,6 @@ public class JudgeQuestion extends Question{
     private Integer score;
 
     private String analysis; //题目解析
+
+    private Boolean isMark;
 }
